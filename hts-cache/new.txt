@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+20:36:57	86508/86508	---M--	200	added ('OK')	text/html	date:Thu,%2022%20Oct%202020%2011:37:01%20GMT	http://mcard.barunnfamily.com/B3028630?4029/index.html	/Users/yonghyunjung/websites/invite/mcard.barunnfamily.com/B3028630a1ab.html	(from )
+20:36:58	26/26	---M--	200	added ('OK')	text/plain	etag:%22344e472584edd31:0%22	http://mcard.barunnfamily.com/robots.txt		(from )
