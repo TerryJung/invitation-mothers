@@ -485,7 +485,7 @@ header {color:#fff; background:#fff; position:relative; min-height:200px; overfl
 			<!-- 팝업 -->
 			<div class="remittance_pop_h" style="display: none;">
 				<div class="remittance_pop_inner">
-					<p class="account_info">신랑 <span class="account_name account_name_h input_husband"></span> 계좌번호</p>
+					<p class="account_info">신랑측 <span class="account_name account_name_h input_husband_host"></span> 혼주 이영호 계좌번호</p>
 					<p class="account_h_c account_c grm_account_bank"></p>
 					<p class="account_num grm_account_num" id="h_num"></p>
 					<a class="copy_btn" onclick="copyToClipboard('h_num')">복사하기</a>
@@ -494,7 +494,7 @@ header {color:#fff; background:#fff; position:relative; min-height:200px; overfl
 			</div>
 			<div class="remittance_pop_w" style="display: none;">
 				<div class="remittance_pop_inner">
-					<p class="account_info">신부 <span class="account_name account_name_w input_wife"></span> 계좌번호</p>
+					<p class="account_info">신부측 <span class="account_name account_name_w input_wife_host"></span>혼주 정치홍 계좌번호</p>
 					<p class="account_w_c account_c brd_account_bank"></p>
 					<p class="account_num brd_account_num" id="w_num"></p>
 					<a class="copy_btn" onclick="copyToClipboard('w_num')">복사하기</a>
@@ -739,8 +739,11 @@ header {color:#fff; background:#fff; position:relative; min-height:200px; overfl
                     $(".main_pohoto > img").attr("src", $("#invMainImage").val()+"?ipignore=true&" + d.getTime());
             }
             // 청첩장정보
-            if ($(".input_husband").length>0) $(".input_husband").html($("#grmName").val());
-            if ($(".input_wife").length>0) $(".input_wife").html($("#brdName").val());
+            // if ($(".input_husband").length>0) $(".input_husband").html($("#grmName").val());
+            // if ($(".input_wife").length>0) $(".input_wife").html($("#brdName").val());
+
+            $("input_husband_host").text("혼주 이영호");
+            $("input_husband_wife").text("혼주 정치홍");
             if ($("dl.husband").length>0 && $("#grmMobile").length>0) {
                 $("dl.husband > dd").eq(0).find("a").attr("href", "tel:" + $("#grmMobile").val());
                 $("dl.husband > dd").eq(1).find("a").attr("href", "sms:" + $("#grmMobile").val());
@@ -1141,10 +1144,10 @@ header {color:#fff; background:#fff; position:relative; min-height:200px; overfl
                 $("#MoneyGift").hide();
             }
 
-            $(".grm_account_bank").html("카카오뱅크");
-            $(".brd_account_bank").html("카카오뱅크");
-            $(".grm_account_num").text("3333-09-5251357");
-            $(".brd_account_num").text("3333-02-9013753");
+            $(".grm_account_bank").html("대구은행");
+            $(".brd_account_bank").html("경남은행");
+            $(".grm_account_num").text("508-14-042361-0");
+            $(".brd_account_num").text("544-22-0275054");
 
             if ("Y" == "Y" || "Y" == "Y") {
                 $(".remittance").show();
