@@ -739,11 +739,11 @@ header {color:#fff; background:#fff; position:relative; min-height:200px; overfl
                     $(".main_pohoto > img").attr("src", $("#invMainImage").val()+"?ipignore=true&" + d.getTime());
             }
             // 청첩장정보
-            // if ($(".input_husband").length>0) $(".input_husband").html($("#grmName").val());
-            // if ($(".input_wife").length>0) $(".input_wife").html($("#brdName").val());
+            if ($(".input_husband").length>0) $(".input_husband").html($("#grmName").val());
+            if ($(".input_wife").length>0) $(".input_wife").html($("#brdName").val());
 
-            $("input_husband_host").text("혼주 이영호");
-            $("input_husband_wife").text("혼주 정치홍");
+            // $("input_husband_host").text("혼주 이영호");
+            // $("input_husband_wife").text("혼주 정치홍");
             if ($("dl.husband").length>0 && $("#grmMobile").length>0) {
                 $("dl.husband > dd").eq(0).find("a").attr("href", "tel:" + $("#grmMobile").val());
                 $("dl.husband > dd").eq(1).find("a").attr("href", "sms:" + $("#grmMobile").val());
